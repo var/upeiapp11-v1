@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <title>Sample FORM to take user input in HTML</title>
+  <link href="media/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="header-wrap">
+    <div id="header">
+      <div class="wrap">
+        <div class="branding">
+          <h1 id="blog-title" class="blogtitle"><a href="/" title="UPEI APP 11">UPEI App
+          11</a></h1>
+        </div><!-- .branding -->
+      </div><!-- .wrap -->
+    </div><!--  #header -->
+  </div>
+
+  <div id="wrapper">
+    <div class="clear"></div>
+<div class="sidebar-left">
+	<ul class="xoxo">
+    <p class="text-side"><a href="/">Home</a>
+    </ul>
+</div>
+    <div id="container">
+      <div id="content">
+        <div id="post-0">
+          <div class="hentry">
+            <h2 class="entry-title">The following information has been saved in our database:</h2>
+
+            <div class="entry-content">
+              {% if posts %}
+
+      <table style = "border: 0; border-width: 0;
+         border-spacing: 10">
+      <tr><td style = "background-color: yellow">Name </td>
+          <td style = "background-color: yellow">Email</td>
+          <td style = "background-color: yellow">Phone</td>
+          <td style = "background-color: yellow">OS</td>
+          <td style = "background-color: yellow">Book</td></tr>
+      {% for post in posts %}
+
+      <tr><td>{{ post.first_name }} {{ post.last_name }}</td><td>{{ post.email }}</td>
+          <td>{{ post.phone }}</td><td>{{ post.osys }}</td><td>{{ post.pref_book }}</td></tr>
+     
+       {% endfor %}
+        </table>
+    {% endif %}
+   
+  </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">Powered by Django</div>
+</body>
+</html>

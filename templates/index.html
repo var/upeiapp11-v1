@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <title>Sample FORM to take user input in HTML</title>
+  <link href="media/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="header-wrap">
+    <div id="header">
+      <div class="wrap">
+        <div class="branding">
+          <h1 id="blog-title" class="blogtitle"><a href="/" title="UPEI APP 11">UPEI App
+          11</a></h1>
+        </div><!-- .branding -->
+      </div><!-- .wrap -->
+    </div><!--  #header -->
+  </div>
+
+  <div id="wrapper">
+    <div class="clear"></div>
+    <div class="sidebar-left">
+	<ul class="xoxo">
+    <p class="text-side"><a href="/">Home</a><br /><br />
+    <a href="/all">List all entries</a></p>
+    </ul>
+</div>
+
+    <div id="container">
+      <div id="content">
+        <div id="post-0">
+          <div class="hentry">
+            <h2 class="entry-title">This is a sample registration form.</h2>
+
+            <div class="entry-content">
+              <p>Please fill in all fields and click Submit.</p>
+   
+    <form action="/thanks" method="post">
+    <table style="border-style: hidden;">
+        {{ form.as_table }}
+        </table>
+      <div><input type="submit" value="Submit"></div>
+    </form>
+  </div>
+  <br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">Powered by Django</div>
+</body>
+</html>
